@@ -1,0 +1,92 @@
+:root {
+    --bg-primary: #0A192F;
+    --bg-secondary: #1E3A8A;
+    --accent-orange: #FF9800;
+    --accent-yellow: #FFD700;
+    --btn-gradient-1: linear-gradient(45deg, #1565C0, #1976D2);
+    --btn-gradient-2: linear-gradient(45deg, #FF9800, #FFD700);
+    --text-primary: #FFFFFF;
+    --text-secondary: rgba(255, 255, 255, 0.85);
+    --shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Navbar */
+.navbar {
+    background-color: var(--bg-secondary) !important;
+}
+
+.navbar .navbar-brand,
+.navbar .btn {
+    color: var(--text-primary);
+}
+
+.navbar .btn:hover {
+    color: var(--accent-yellow);
+}
+
+/* Headings */
+h2 {
+    color: var(--text-primary);
+}
+
+/* Paragraphs */
+p {
+    color: var(--text-secondary);
+}
+
+/* Card styles */
+.card {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(8px);
+    color: var(--text-secondary);
+}
+
+.card-title {
+    color: var(--text-primary);
+}
+
+.card-text {
+    color: var(--text-secondary);
+}
+
+/* Buttons */
+.btn {
+    font-weight: 600;
+    text-transform: uppercase;
+    border-radius: 10px;
+    padding: 10px 20px;
+}
+
+.btn-primary {
+    background: var(--btn-gradient-1);
+    border: none;
+    color: var(--text-primary);
+}
+
+.btn-warning {
+    background: var(--btn-gradient-2);
+    border: none;
+    color: var(--bg-primary);
+}
+
+.btn-secondary,
+.btn-dark,
+.btn-outline-info {
+    color: var(--text-primary);
+    border: none;
+}
+
+.btn:hover {
+    opacity: 0.9;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+.text-muted {
+    color: rgba(255, 255, 255, 0.65) !important;
+}

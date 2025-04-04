@@ -1,0 +1,120 @@
+:root {
+    --bg-primary: #0A192F;
+    --bg-secondary: #1E3A8A;
+    --accent-yellow: #FFD700;
+    --btn-gradient-1: linear-gradient(45deg, #1565C0, #1976D2);
+    --text-primary: #FFFFFF;
+    --text-secondary: rgba(255, 255, 255, 0.85);
+}
+
+body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.navbar {
+    background-color: var(--bg-secondary) !important;
+    padding: 1rem 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.back-link {
+    color: var(--accent-yellow);
+    text-decoration: none;
+    padding: 8px 15px;
+    margin-left: 20px;
+    border-radius: 5px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.back-link:hover {
+    color: var(--text-primary);
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.help-section {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.help-section h2 {
+    color: var(--accent-yellow);
+    border-bottom: 2px solid var(--accent-yellow);
+    padding-bottom: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+/* Accordion Styling */
+.accordion-item {
+    background-color: var(--bg-secondary);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 10px;
+}
+
+.accordion-button {
+    background-color: var(--bg-secondary);
+    color: var(--accent-yellow);
+    font-weight: 600;
+    padding: 1rem 1.25rem;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: var(--bg-secondary);
+    color: var(--accent-yellow);
+    box-shadow: none;
+}
+
+.accordion-button::after {
+    filter: invert(1) grayscale(100%) brightness(200%);
+}
+
+.accordion-button:focus {
+    box-shadow: none;
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.accordion-body {
+    background-color: rgba(255, 255, 255, 0.05);
+    color: var(--text-secondary);
+    padding: 1.25rem;
+}
+
+.accordion-body ul {
+    padding-left: 20px;
+    margin-bottom: 0;
+}
+
+.accordion-body li {
+    margin-bottom: 10px;
+}
+
+.accordion-body p {
+    margin-bottom: 8px;
+}
+
+.accordion-body strong {
+    color: var(--accent-yellow);
+}
+
+@media (max-width: 768px) {
+    .help-section {
+        padding: 15px;
+    }
+
+    .back-link {
+        margin-left: 10px;
+    }
+
+    .accordion-button {
+        padding: 0.75rem 1rem;
+    }
+}

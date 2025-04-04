@@ -1,0 +1,231 @@
+:root {
+    --bg-primary: #0A192F;
+    --bg-secondary: #1E3A8A;
+    --accent-orange: #FF9800;
+    --accent-yellow: #FFD700;
+    --btn-gradient-1: linear-gradient(45deg, #1565C0, #1976D2);
+    --btn-gradient-2: linear-gradient(45deg, #FF9800, #FFD700);
+    --text-primary: #FFFFFF;
+    --text-secondary: rgba(255, 255, 255, 0.85);
+    --shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+body {
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    line-height: 1.6;
+}
+
+/* Hero Section Styles */
+.hero-section {
+    min-height: 100vh;
+    background: linear-gradient(rgba(30, 58, 138, 0.9), rgba(21, 101, 192, 0.9)),
+                url('https://source.unsplash.com/random/1920x1080/?community') center/cover;
+    position: relative;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, var(--bg-secondary), var(--accent-orange));
+    opacity: 0.2;
+}
+
+/* Typography */
+.display-1 {
+    font-size: 5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.lead {
+    color: var(--text-secondary);
+    font-size: 1.8rem;
+    font-weight: 300;
+    margin-bottom: 2rem;
+}
+
+/* Button Styles */
+.btn-custom {
+    padding: 15px 40px;
+    border-radius: 50px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    min-width: 200px;
+    margin: 0 15px;
+}
+
+.btn-primary {
+    background: var(--btn-gradient-1);
+    border: none;
+    color: var(--text-primary);
+    box-shadow: 0 4px 15px rgba(21, 101, 192, 0.3);
+}
+
+.btn-outline-light {
+    background: var(--btn-gradient-2);
+    border: none;
+    color: var(--bg-primary);
+    font-weight: 700;
+    box-shadow: 0 4px 15px rgba(255, 152, 0, 0.3);
+}
+
+.btn-custom:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+/* Form Styles */
+.card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: var(--shadow);
+}
+
+.form-control {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: var(--text-primary);
+}
+
+.form-control:focus {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: var(--accent-orange);
+    color: var(--text-primary);
+    box-shadow: 0 0 0 3px rgba(255, 152, 0, 0.2);
+}
+
+/* Form Labels */
+.form-label {
+    color: var(--text-primary);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .display-1 {
+        font-size: 3.5rem;
+    }
+    
+    .lead {
+        font-size: 1.4rem;
+    }
+    
+    .btn-custom {
+        padding: 12px 30px;
+        margin: 10px 5px;
+    }
+}
+
+/* Form Success/Error States */
+.form-control.is-valid {
+    border-color: #4CAF50;
+    background-image: none;
+}
+
+.form-control.is-invalid {
+    border-color: #f44336;
+    background-image: none;
+}
+
+.auth-container {
+    min-height: 100vh;
+    background: var(--bg-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.auth-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: var(--shadow);
+    padding: 2.5rem;
+    width: 100%;
+    max-width: 500px;
+}
+
+.auth-title {
+    color: var(--text-primary);
+    font-size: 2.5rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.auth-form .form-label {
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+.auth-form .form-control {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: var(--text-primary);
+    padding: 12px 20px;
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+}
+
+.auth-form .form-control:focus {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: var(--accent-orange);
+    box-shadow: 0 0 0 3px rgba(255, 152, 0, 0.2);
+}
+
+.auth-form .btn-submit {
+    background: var(--btn-gradient-1);
+    color: var(--text-primary);
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    font-weight: 600;
+    margin-top: 1rem;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.auth-form .btn-submit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+.auth-link {
+    color: var(--accent-orange);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.auth-link:hover {
+    color: var(--accent-yellow);
+    text-decoration: underline;
+}
+
+.back-home {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: var(--text-primary);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+}
+
+.back-home:hover {
+    color: var(--accent-orange);
+}

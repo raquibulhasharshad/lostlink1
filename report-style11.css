@@ -1,0 +1,70 @@
+:root {
+    --bg-primary: #0A192F;
+    --bg-secondary: #112240;
+    --text-light: #ffffff;
+    --text-muted: rgba(255, 255, 255, 0.7);
+    --accent-blue: #3B82F6;
+}
+
+body {
+    background-color: var(--bg-primary);
+    color: var(--text-light);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.navbar {
+    background-color: #1E3A8A !important;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: var(--text-light) !important;
+}
+
+h2 {
+    color: var(--text-light);
+    text-align: center;
+    font-weight: bold;
+}
+
+.text-muted {
+    color: rgba(255, 255, 255, 0.6) !important;
+}
+
+.form-container {
+    background-color: var(--bg-secondary);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.form-label {
+    color: var(--text-muted);
+    font-weight: 500;
+}
+
+.form-control,
+.form-select {
+    background-color: #1e1e2e;
+    border: 1px solid #444;
+    color: white;
+}
+
+.form-control::placeholder {
+    color: #aaa;
+}
+
+.btn-submit {
+    background-color: var(--accent-blue);
+    color: white;
+    font-weight: bold;
+    border: none;
+    padding: 12px;
+    font-size: 1rem;
+    border-radius: 8px;
+}
+
+.btn-submit:hover {
+    background-color: #2563eb;
+}

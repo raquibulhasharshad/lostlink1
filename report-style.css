@@ -1,0 +1,70 @@
+:root {
+    --bg-primary: #0A192F;
+    --bg-secondary: #1E3A8A;
+    --accent-yellow: #FFD700;
+    --btn-gradient-1: linear-gradient(45deg, #1565C0, #1976D2);
+    --text-primary: #FFFFFF;
+    --text-secondary: rgba(255, 255, 255, 0.85);
+}
+
+body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Navbar */
+.navbar {
+    background-color: var(--bg-secondary) !important;
+}
+
+.navbar .navbar-brand,
+.navbar .btn {
+    color: var(--text-primary);
+}
+
+.navbar .btn:hover {
+    color: var(--accent-yellow);
+}
+
+/* Form styling */
+label {
+    color: var(--text-primary);
+}
+
+.form-control,
+.form-select {
+    background-color: rgba(255, 255, 255, 0.05);
+    color: var(--text-primary);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.form-control::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.form-check-label {
+    color: var(--text-secondary);
+}
+
+/* Button */
+.btn-primary {
+    background: var(--btn-gradient-1);
+    border: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 10px;
+    padding: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.btn-primary:hover {
+    opacity: 0.9;
+}
+
+.text-muted {
+    color: var(--text-secondary) !important;
+}
+.gen{
+    color: #0A192F;
+}
